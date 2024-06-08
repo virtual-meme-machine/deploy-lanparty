@@ -76,7 +76,7 @@ OpenRA can install its own game data but if you want to provide your own follow 
 
 #### StarCraft: Brood War
 
-1. Install [StarCraft: Brood War](https://en.wikipedia.org/wiki/StarCraft:_Brood_War) Classic from CD, etc.
+1. Install [StarCraft: Brood War Classic](https://en.wikipedia.org/wiki/StarCraft:_Brood_War) from CD, etc.
 2. Install any patches that you want, see: https://archive.org/details/StarCraftPatches
 3. Browse to your StarCraft game data folder
 4. Browse up one level so that you can see the `StarCraft` game folder
