@@ -35,12 +35,6 @@ def main():
         print(f"This script does not support OS: {operating_system}")
         exit(200)
 
-    # Verify host is running Fedora
-    distro = platform.freedesktop_os_release().get("NAME")
-    if distro != "Fedora Linux":
-        print(f"This script does not support Linux distro: {distro}")
-        exit(201)
-
     # Force usage of CLI prompts
     set_use_cli_prompts(value=True)
 
