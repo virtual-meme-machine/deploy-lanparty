@@ -10,6 +10,7 @@ from data.targets.OpenRCT2 import OpenRCT2
 from data.targets.SRB2K import SRB2K
 from data.targets.StarCraftBroodWar import StarCraftBroodWar
 from data.targets.ioquake3 import ioquake3
+from utils.caffeine_utils import activate_caffeine, deactivate_caffeine
 from utils.flatpak_utils import install_flatpaks, is_flatpak_installed
 from utils.zenity_utils import set_use_cli_prompts
 
@@ -26,14 +27,20 @@ TARGETS: list[InstallTarget] = [
 
 def main():
     """
-    
-    :return: 
+    Bootstraps LAN party environment to the host by preforming the following actions:
+    - Installs a communications app for voice chat
+    - Installs required dependencies such as Bottles
+    - Installs and configures all available targets
+    :return: None
     """
     # Verify host is running Linux
     operating_system = platform.system()
     if operating_system != "Linux":
         print(f"This script does not support OS: {operating_system}")
         exit(200)
+
+    # Activate caffeine to prevent host from going to sleep
+    activate_caffeine()
 
     # Force usage of CLI prompts
     set_use_cli_prompts(value=True)
@@ -65,6 +72,10 @@ def main():
             target.configure()
         except Exception as err:
             print(f"Failed to install: {err}")
+
+    # Deactivate caffeine and exit
+    deactivate_caffeine()
+    exit(0)
 
 
 if __name__ == "__main__":

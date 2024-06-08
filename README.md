@@ -14,7 +14,7 @@ This script can also install the following titles **if** you provide your own ga
 - [ioquake3](https://ioquake3.org)
 - [OpenRA](https://www.openra.net)
 - [OpenRCT2](https://openrct2.org)
-- [StarCraft: Brood War](https://en.wikipedia.org/wiki/StarCraft:_Brood_War) Classic
+- [StarCraft: Brood War Classic](https://en.wikipedia.org/wiki/StarCraft:_Brood_War)
 
 ## Providing Game Data
 
