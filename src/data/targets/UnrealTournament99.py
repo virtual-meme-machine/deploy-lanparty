@@ -28,4 +28,3 @@ class UnrealTournament99(TargetFlatpak):
         self.move_game_data(source_paths=[os.path.join(game_data_dir, path) for path in os.listdir(game_data_dir)],
                             target_path=os.path.join(self.target_root, "data"),
                             check_path=os.path.join(self.target_root, "data/System"))
-        os.rmdir(path=game_data_dir)

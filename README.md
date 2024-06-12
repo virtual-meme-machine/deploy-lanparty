@@ -4,15 +4,24 @@ Lightweight script that deploys LAN compatible games to a Linux host.
 
 ## Games
 
-This script will install the following freely available games:
+### Free and Open-Source
+
+The following games require no additional game data to install:
 
 - [Sonic Robo Blast 2 Kart](https://www.wiki.srb2.org/wiki/SRB2Kart)
 
-This script can also install the following titles **if** you provide your own game data:
+### Optional Game Data
+
+The following games require no additional game data to install but will be enhanced with if game data is provided:
+
+- [OpenRA](https://www.openra.net)
+
+### Requires Game Data
+
+The following games require additional game data to install and will be skipped if not provided:
 
 - [Counter-Strike 1.6](https://store.steampowered.com/app/10/CounterStrike)
 - [ioquake3](https://ioquake3.org)
-- [OpenRA](https://www.openra.net)
 - [OpenRCT2](https://openrct2.org)
 - [StarCraft: Brood War Classic](https://en.wikipedia.org/wiki/StarCraft:_Brood_War)
 - [Unreal Tournament GOTY (1999)](https://en.wikipedia.org/wiki/Unreal_Tournament)
