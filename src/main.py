@@ -4,27 +4,13 @@ import platform
 import sys
 
 from data.InstallTarget import InstallTarget
-from data.targets.CounterStrike16 import CounterStrike16
-from data.targets.OpenRA import OpenRA
-from data.targets.OpenRCT2 import OpenRCT2
-from data.targets.SRB2K import SRB2K
-from data.targets.StarCraftBroodWar import StarCraftBroodWar
-from data.targets.UnrealTournament99 import UnrealTournament99
-from data.targets.ioquake3 import ioquake3
 from utils.caffeine_utils import activate_caffeine, deactivate_caffeine
 from utils.flatpak_utils import install_flatpaks, is_flatpak_installed
+from utils.target_utils import load_targets
 from utils.zenity_utils import set_use_cli_prompts
 
 COMMUNICATION_APP_IDENTIFIER: str = "org.jitsi.jitsi-meet"
-TARGETS: list[InstallTarget] = [
-    CounterStrike16(),
-    ioquake3(),
-    OpenRA(),
-    OpenRCT2(),
-    SRB2K(),
-    StarCraftBroodWar(),
-    UnrealTournament99()
-]
+TARGETS_FOLDER: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/targets")
 
 
 def main():
@@ -54,11 +40,15 @@ def main():
     # Get data folder from args
     data_folder = os.path.expanduser(path=sys.argv[1]) if len(sys.argv) > 1 else None
 
+    # Load targets
+    targets: list[InstallTarget] = load_targets(target_folder=TARGETS_FOLDER)
+    print(f"Found {len(targets)} target(s)")
+
     # Install targets
     index = 0
-    for target in TARGETS:
+    for target in targets:
         index += 1
-        header = f"[{index}/{len(TARGETS)} - {target.name}]"
+        header = f"[{index}/{len(targets)} - {target.name}]"
 
         try:
             print(f"\033[94m\033[1m"

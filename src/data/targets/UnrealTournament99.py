@@ -12,7 +12,7 @@ class UnrealTournament99(TargetFlatpak):
         """
         Installs Unreal Tournament GOTY (1999)
         """
-        super().__init__(name="Unreal Tournament (1999)",
+        super().__init__(name="Unreal Tournament GOTY (1999)",
                          description="The original Unreal Tournament in all of its 1999 glory",
                          identifier="com.epicgames.ut99",
                          requires_additional_data=True,
