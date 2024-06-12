@@ -15,6 +15,7 @@ This script can also install the following titles **if** you provide your own ga
 - [OpenRA](https://www.openra.net)
 - [OpenRCT2](https://openrct2.org)
 - [StarCraft: Brood War Classic](https://en.wikipedia.org/wiki/StarCraft:_Brood_War)
+- [Unreal Tournament GOTY (1999)](https://en.wikipedia.org/wiki/Unreal_Tournament)
 
 ## Providing Game Data
 
@@ -82,3 +83,11 @@ OpenRA can install its own game data but if you want to provide your own follow 
 4. Browse up one level so that you can see the `StarCraft` game folder
 5. Compress the `StarCraft` game folder into a zip file called `starcraft-bw.zip`
 6. Place the `starcraft-bw.zip` zip file in your game data folder
+
+#### Unreal Tournament GOTY (1999)
+
+1. Install Unreal Tournament GOTY from Steam, GOG, CD, etc.
+2. Browse to your Unreal Tournament GOTY game data folder
+3. Browse up one level so that you can see the `Unreal Tournament GOTY` game folder
+4. Compress the `Unreal Tournament GOTY` game folder into a zip file called `unreal-tournament-99.zip`
+5. Place the `unreal-tournament-99.zip` zip file in your game data folder

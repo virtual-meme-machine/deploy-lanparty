@@ -9,6 +9,7 @@ from data.targets.OpenRA import OpenRA
 from data.targets.OpenRCT2 import OpenRCT2
 from data.targets.SRB2K import SRB2K
 from data.targets.StarCraftBroodWar import StarCraftBroodWar
+from data.targets.UnrealTournament99 import UnrealTournament99
 from data.targets.ioquake3 import ioquake3
 from utils.caffeine_utils import activate_caffeine, deactivate_caffeine
 from utils.flatpak_utils import install_flatpaks, is_flatpak_installed
@@ -21,7 +22,8 @@ TARGETS: list[InstallTarget] = [
     OpenRA(),
     OpenRCT2(),
     SRB2K(),
-    StarCraftBroodWar()
+    StarCraftBroodWar(),
+    UnrealTournament99()
 ]
 
 
