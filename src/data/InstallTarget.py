@@ -71,7 +71,7 @@ class InstallTarget(abc.ABC):
                 print(f"{path} is not in the target root, game data will not be moved")
                 return
 
-        if os.path.exists(path=check_path) and os.listdir(path=check_path):
+        if os.path.isfile(path=check_path) or (os.path.isdir(s=check_path) and os.listdir(path=check_path)):
             print("Game data already exists")
             return
 

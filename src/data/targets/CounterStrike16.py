@@ -1,5 +1,6 @@
-from data.TargetBottle import TargetBottle
+import os.path
 
+from data.TargetBottle import TargetBottle
 from utils.game_utils import install_steam_emulator
 
 
@@ -30,7 +31,7 @@ class CounterStrike16(TargetBottle):
                                steam_app_id=10)
 
         self.add_program(name=self.name,
-                         path=f"{self.target_root}/Half-Life/hl.exe",
+                         path=os.path.join(self.target_root, "Half-Life/hl.exe"),
                          launch_options="-game cstrike")
 
         self.create_desktop_file()

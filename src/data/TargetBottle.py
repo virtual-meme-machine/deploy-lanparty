@@ -69,7 +69,7 @@ class TargetBottle(InstallTarget, abc.ABC):
                                                 "--environment", "gaming"],
                        check=True)
 
-    def add_program(self, name: str, path: str, launch_options: str):
+    def add_program(self, name: str, path: str, launch_options: str = ""):
         """
         Registers a program with the Bottle
         :param name: Name of the program, example: "Counter-Strike 1.6"

@@ -1,3 +1,5 @@
+import os
+
 from data.TargetBottle import TargetBottle
 
 
@@ -24,7 +26,6 @@ class StarCraftBroodWar(TargetBottle):
         :return: None
         """
         self.add_program(name=self.name,
-                         path=f"{self.target_root}/StarCraft/StarCraft.exe",
-                         launch_options="")
+                         path=os.path.join(self.target_root, "StarCraft/StarCraft.exe"))
 
         self.create_desktop_file()

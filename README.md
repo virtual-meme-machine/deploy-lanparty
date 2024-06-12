@@ -4,6 +4,8 @@ Lightweight script that deploys LAN compatible games to a Linux host.
 
 ## Games
 
+This script targets games that are easily installable, have low system requirements, and have native LAN support.
+
 ### Free and Open-Source
 
 The following games require no additional game data to install:
@@ -14,12 +16,14 @@ The following games require no additional game data to install:
 
 The following games require no additional game data to install but will be enhanced with if game data is provided:
 
+- [DevilutionX](https://github.com/diasurgical/devilutionx)
 - [OpenRA](https://www.openra.net)
 
 ### Requires Game Data
 
 The following games require additional game data to install and will be skipped if not provided:
 
+- [Age of Empires II HD (2013)](https://store.steampowered.com/app/221380/Age_of_Empires_II_Retired)
 - [Counter-Strike 1.6](https://store.steampowered.com/app/10/CounterStrike)
 - [ioquake3](https://ioquake3.org)
 - [OpenRCT2](https://openrct2.org)
@@ -42,6 +46,18 @@ counterstrike-16.zip  quake3.zip  openra.zip
 ./src/main.py ~/my_game_data
 ```
 
+#### Age of Empires II HD (2013)
+
+1. Purchase [Age of Empires II HD (2013)](https://store.steampowered.com/app/221380/Age_of_Empires_II_Retired) from
+   Steam
+2. Install Age of Empires II HD (2013) using Steam
+3. Locate Age of Empires II HD (2013) in your Steam library, right click on it, click Manage, and then click Browse
+   local files
+4. You should now see the contents of the `Age2HD` game folder
+5. Browse up one level so that you can see the `Age2HD` game folder and folders for any other Steam games
+6. Compress the `Age2HD` game folder into a zip file called `aoe2hd.zip`
+7. Place the `aoe2hd.zip` zip file in your game data folder
+
 #### Counter-Strike 1.6
 
 1. Purchase [Counter-Strike 1.6](https://store.steampowered.com/app/10/CounterStrike) from Steam
@@ -52,6 +68,14 @@ counterstrike-16.zip  quake3.zip  openra.zip
 5. Browse up one level so that you can see the `Half-Life` game folder and folders for any other Steam games
 6. Compress the `Half-Life` game folder into a zip file called `counterstrike-16.zip`
 7. Place the `counterstrike-16.zip` zip file in your game data folder
+
+#### DevilutionX
+
+1. Install Diablo from GOG, CD, etc.
+2. Optionally install the Hellfire expansion from GOG, CD, etc.
+3. Browse to the Diablo game files and locate the `DIABDAT.MPQ` and optionally a folder called `hellfire`
+4. Compress `DIABDAT.MPQ` and optionally the `hellfire` folder into a zip file called `devilutionx.zip`
+5. Place the `devilutionx.zip` zip file in your game data folder
 
 #### ioquake3
 
